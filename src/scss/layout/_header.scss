@@ -15,13 +15,14 @@
         @include tablet {
             min-height: 70rem;
         }
-    }
-    .contenido-header {
-        @include tablet {
-            min-height: 70rem;
+        .contenido-header {
+            @include tablet {
+                min-height: 70rem;
+            }
         }
     }
-} //ejectuar gulp en terminal
+}
+
 .contenido-header {
     display: flex;
     flex-direction: column;
