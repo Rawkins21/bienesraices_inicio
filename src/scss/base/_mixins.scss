@@ -24,8 +24,8 @@
     grid-template-columns: repeat($columnas, 1fr);
 }
 
-@mixin boton() {
-    background-color: $amarillo;
+@mixin boton($bgColor) {
+    background-color: $bgColor;
     color: $blanco;
     font-weight: bold;
     text-decoration: none;
