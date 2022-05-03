@@ -1,0 +1,5 @@
+.contenido-nosotros {
+    @include tablet {
+        @include grid(2, 2rem);
+    }
+}
