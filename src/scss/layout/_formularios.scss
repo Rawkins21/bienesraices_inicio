@@ -1,0 +1,19 @@
+.formulario {
+    p {
+        font-size: 1.4rem;
+        color: $grisOscuro;
+        margin: 2rem 0 0 0;
+    }
+    legend {
+        font-size: 2rem;
+        color: $grisOscuro;
+    }
+    label {
+        font-weight: $bold;
+        text-transform: uppercase;
+        display: block;
+    }
+    input:not([type="submit"]) {
+        padding: 1rem;
+    }
+}
