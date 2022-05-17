@@ -13,11 +13,11 @@
         background-position: center center;
         background-size: cover;
         @include tablet {
-            min-height: 70rem;
+            min-height: 56rem;
         }
         .contenido-header {
             @include tablet {
-                min-height: 70rem;
+                min-height: 56rem;
             }
         }
     }
