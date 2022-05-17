@@ -13,9 +13,9 @@ function eventListeners() {
 function navegacionResponsive() {
     const navegacion = document.querySelector('.navegacion');
 
-    if (navegacion.classlist.contains('mostrar')) {
-        navegacion.classlist.remove('mostrar');
+    if (navegacion.classList.contains('mostrar')) {
+        navegacion.classList.remove('mostrar');
     } else {
-        navegacion.classlist.add('mostrar');
+        navegacion.classList.add('mostrar');
     }
 }
