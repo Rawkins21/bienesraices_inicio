@@ -1,7 +1,13 @@
 document.addEventListener('DOMContentLoaded', function() {
 
     eventListeners();
+
+    darkmode();
 });
+
+function darkmode() {
+
+}
 
 function eventListeners() {
     const mobileMenu = document.querySelector('.mobile-menu');
