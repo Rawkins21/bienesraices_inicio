@@ -9,7 +9,7 @@ function darkmode() {
     const botonDarkMode = document.querySelector('.dark-mode-boton');
 
     botonDarkMode.addEventListener('click', function() {
-        document.classList.toogle('dark-mode') // toogle agrega o quita la clase correspondiente
+        document.body.classList.toggle('dark-mode') // toogle agrega o quita la clase correspondiente
     })
 }
 
