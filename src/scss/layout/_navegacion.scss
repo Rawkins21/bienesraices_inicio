@@ -35,7 +35,8 @@
             .navegacion {
                 visibility: hidden;
                 opacity: 0;
-                transition: visibility .3s ease-in-out, opacity 0.5s linear; // animaciones de transicion 
+                height: 0;
+                transition: visibility .3s ease-in-out, opacity .3s linear, height .3s linear; // animaciones de transicion 
                 @include tablet {
                     display: flex;
                     align-items: center;
@@ -71,4 +72,5 @@
             .mostrar {
                 visibility: visible;
                 opacity: 1;
+                height: auto;
             }
