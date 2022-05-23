@@ -16,5 +16,8 @@
         .precio {
             color: $verde;
         }
+        .icono {
+            filter: invert(100%);
+        }
     }
 }
