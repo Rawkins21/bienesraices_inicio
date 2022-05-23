@@ -13,5 +13,8 @@
     .anuncio {
         background-color: $grisOscuro;
         border: 1px solid $grisOscuro;
+        .precio {
+            color: $verde;
+        }
     }
 }
