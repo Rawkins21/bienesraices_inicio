@@ -198,4 +198,4 @@ incluirTemplate('header', $inicio = true); // $inicio = true activa el css de la
 
     <?php 
 
-include 'includes/templates/footer.php'; ?>
+incluirTemplate('footer');  ?>
