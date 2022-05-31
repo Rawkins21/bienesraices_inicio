@@ -11,7 +11,7 @@
 
 <body>
 
-     <header class="header <?php echo isset ($inicio) ? 'inicio' : '' ?>"> <!-- //<?php echo $inicio ? 'inicio' : '' ?>" actua como if con la variable $inicio del index haciendo que inicio solo se active si es llamado// isset verifica la variable -->
+     <header class="header <?php echo $inicio ? 'inicio' : '' ?>"> <!-- //<?php echo $inicio ? 'inicio' : '' ?>" actua como if con la variable $inicio del index haciendo que inicio solo se active si es llamado-->
         <div class="contenedor contenido-header">
             <div class="barra">
                 <a href="/">

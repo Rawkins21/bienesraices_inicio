@@ -1,6 +1,10 @@
 <?php 
-$inicio = true; // activa el css de la clase inicio del header
-include 'includes/templates/header.php'; ?>
+
+require 'includes/funciones.php';
+
+
+incluirTemplate('header', $inicio = true); // $inicio = true activa el css de la clase inicio del header
+?>
 
     <main class="contenedor seccion">
         <h1>Más Sobre Nosotros</h1>
