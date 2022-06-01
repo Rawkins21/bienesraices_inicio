@@ -4,7 +4,7 @@ incluirTemplate('header');
 ?>
 
     <main class="contenedor seccion">
-        <h1>Crear</h1>
+        <h1>Administrador de Bienes Raices</h1>
     </main>
 
     <?php 
