@@ -8,7 +8,7 @@ incluirTemplate('header');
 
         <a href="/admin" class="boton boton-verde">Volver</a>
 
-        <form action="formulario">
+        <form class="formulario">
             <fieldset>
                 <legend>información General</legend>
 
@@ -25,14 +25,36 @@ incluirTemplate('header');
                 <textarea id="descripcion" cols="30" rows="10"></textarea>
 
             </fieldset>
-        </form>
+        
 
-        <fieldset>
+            <fieldset>
             <legend>informacion de Propiedad</legend>
-            <label for="habitaciones">Habitaciones:</label>
-                <input type="number" id="habitaciones" placeholder="Ej: 3">
 
-        </fieldset>
+            <label for="habitaciones">Habitaciones:</label>
+            <input type="number" id="habitaciones" placeholder="Ej: 3" min="1" max="9">
+
+            <label for="wc">Baños:</label>
+            <input type="number" id="wc" placeholder="Ej: 3" min="1" max="9">
+
+            <label for="estacionamiento">Estracionamiento:</label>
+            <input type="number" id="estacionamiento" placeholder="Ej: 3" min="1" max="9">
+
+         </fieldset>
+
+         <fieldset>
+            <legend>Vendedor</legend>
+
+            <select name="" id="">
+
+                <option value="1">Juan</option>
+                <option value="2">Karen</option>
+
+            </select>
+        
+         </fieldset>
+       
+            <input type="submit" value="Crear Propiedad" class="boton boton-verde">
+        </form>
     </main>
 
     <?php 
