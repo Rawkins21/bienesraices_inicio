@@ -1,4 +1,7 @@
 <?php 
+// Base de datos
+require '../../includes/config/database.php';
+
 require '../../includes/funciones.php'; // ../../ sale de las carpetas propiedades y admin para entrar entrar en includes
 incluirTemplate('header'); 
 ?>
