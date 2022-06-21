@@ -4,6 +4,17 @@ require '../../includes/config/database.php';
 
 conectarDB();
 
+if ($_SERVER['REQUEST_METHOD'] === 'POST'){
+echo"<pre>";
+var_dump($_POST);
+echo"</pre>";
+
+$titulo = $_POST['titulo'];
+$precio = $_POST['precio'];
+}
+
+
+
 require '../../includes/funciones.php'; // ../../ sale de las carpetas propiedades y admin para entrar entrar en includes
 incluirTemplate('header'); 
 ?>
@@ -13,15 +24,15 @@ incluirTemplate('header');
 
         <a href="/admin" class="boton boton-verde">Volver</a>
 
-        <form class="formulario">
+        <form class="formulario" method="POST" action="/admin/propiedades/crear.php">
             <fieldset>
                 <legend>información General</legend>
 
                 <label for="titulo">Titulo:</label>
-                <input type="text" id="titulo" placeholder="Ttiulo de Propiedad">
+                <input type="text" id="titulo" name="titulo" placeholder="Ttiulo de Propiedad">
 
                 <label for="precio">Precio:</label>
-                <input type="number" id="precio" placeholder="Precio de Propiedad">
+                <input type="number" id="precio" name="precio" placeholder="Precio de Propiedad">
 
                 <label for="imagen">Imagen:</label>
                 <input type="file" id="imagen" accept="image/jpeg, image/png"> <!--//accept especifica los formatos a aceptar -->
