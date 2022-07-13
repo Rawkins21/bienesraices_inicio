@@ -5,9 +5,9 @@ $db = conectarDB();
 
 //imprime en la pagina la informacion enviada al servidor. superglobal $_POST
 if ($_SERVER['REQUEST_METHOD'] === 'POST'){
-echo"<pre>";
-var_dump($_POST);
-echo"</pre>";
+// echo"<pre>";
+// var_dump($_POST);
+// echo"</pre>";
 
 $titulo = $_POST['titulo'];
 $precio = $_POST['precio'];
