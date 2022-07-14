@@ -8,4 +8,6 @@ function conectarDB(){
     //  } else{
     //      echo "no se conecto";
     //   } comprobar si se conecto a la base de datos
+    return $db;
 }
+

@@ -24,9 +24,11 @@ $query = "INSERT INTO propiedades (titulo, precio, descripcion, habitaciones, wc
 
 $resultado = mysqli_query($db, $query);
 
-if($resultado){
-    echo "Insertado Correctamente";
-}
+
+// comprobar si se escribio correctamente la db
+// if($resultado){
+//     echo "Insertado Correctamente";
+// }
 
 }
 
@@ -79,8 +81,8 @@ incluirTemplate('header');
 
             <select name="vendedor">
 
-                <option value="1">Juan</option>
-                <option value="2">Karen</option>
+                <option value="1">Mariano</option>
+                <option value="2">Gordon</option>
 
             </select>
         
