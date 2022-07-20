@@ -3,8 +3,12 @@
 require '../../includes/config/database.php';
 $db = conectarDB();
 
-//imprime en la pagina la informacion enviada al servidor. superglobal $_POST
+// Arreglo con mensajes de errores
+$errores = [];
+
+//Ejecutar el codigo despues de que el usuario envia el formulario
 if ($_SERVER['REQUEST_METHOD'] === 'POST'){
+//imprime en la pagina la informacion enviada al servidor. superglobal $_POST
 // echo"<pre>";
 // var_dump($_POST);
 // echo"</pre>";
@@ -17,7 +21,45 @@ $wc = $_POST['wc'];
 $estacionamiento = $_POST['estacionamiento'];
 $vendedor = $_POST['vendedor'];
 
-//insertar en la base de datos
+// Validador
+if(!$titulo){
+    $errores[]= "Debes añadir un titulo"; // añade este mensaje al arreglo automaticamente
+}
+
+if(!$precio){
+    $errores[]= "El precio es obligatorio"; // añade este mensaje al arreglo automaticamente
+}
+
+if(strlen($descripcion) <50){
+    $errores[]= "la descripcion es obligatoria y con al menos 50 caracteres"; // añade este mensaje al arreglo automaticamente
+}
+
+if(!$habitaciones){
+    $errores[]= "El número de habitaciones es obligatorio"; // añade este mensaje al arreglo automaticamente
+}
+
+if(!$wc){
+    $errores[]= "El número de baños es obligatorio"; // añade este mensaje al arreglo automaticamente
+}
+
+if(!$estacionamiento){
+    $errores[]= "El número de lugares de estacionamiento es obligatorio"; // añade este mensaje al arreglo automaticamente
+}
+
+if(!$vendedor){
+    $errores[]= "Elige un vendedor"; // añade este mensaje al arreglo automaticamente
+}
+
+//  echo"<pre>";
+//  var_dump($errores);
+//  echo"</pre>";
+
+// exit; // previene que se ejecute la insercion a la base de datos
+
+//Revisar que el arreglo de $errores este vacio
+
+if(empty($errores)){
+    //insertar en la base de datos
 $query = "INSERT INTO propiedades (titulo, precio, descripcion, habitaciones, wc, estacionamiento, vendedorid) VALUES ('$titulo', '$precio', '$descripcion', '$habitaciones', '$wc', '$estacionamiento', '$vendedor')";
 
 // echo $query;
@@ -29,6 +71,9 @@ $resultado = mysqli_query($db, $query);
 // if($resultado){
 //     echo "Insertado Correctamente";
 // }
+}
+
+
 
 }
 
@@ -43,6 +88,14 @@ incluirTemplate('header');
 
         <a href="/admin" class="boton boton-verde">Volver</a>
 
+        <?php foreach($errores as $error): ?>
+        <div class="alerta error">
+        <?php echo $error; ?>
+        </div>
+        <?php endforeach; ?>
+        
+        
+            
         <form class="formulario" method="POST" action="/admin/propiedades/crear.php">
             <fieldset>
                 <legend>información General</legend>
@@ -80,7 +133,7 @@ incluirTemplate('header');
             <legend>Vendedor</legend>
 
             <select name="vendedor">
-
+                <option value="">-- Seleccione --</option>
                 <option value="1">Mariano</option>
                 <option value="2">Gordon</option>
 
